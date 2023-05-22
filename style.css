@@ -257,11 +257,11 @@ body{
 .cl-scroll-top {
   position: fixed;
   right: 20px;
-  bottom: 20px;
-  display: none;
   top: 25%;
-  background-color: none;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   z-index: 999;
   text-decoration: none;
   color: #333;
@@ -269,53 +269,27 @@ body{
   font-size: 14px;
 }
 
+.scroll-top-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 .scroll-to-top-holder-title {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  margin-bottom: 85%;
+  margin-top: 10px;
 }
-
-.scroll-top-container {
-  position: relative;
-  width: 40px;
-  height: 400px;
-  overflow: hidden;
-}
-
-#scroll-top-flag {
-  position: relative;
-  width: 20px;
-  height: 150px;
-  background-color: #023859;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-
 #scroll-top-bar {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #df691a;
-  height: 0;
-  transition: height 0.3s ease-in-out;
+  right: 0;
+  bottom: 0; /* Adjust the value according to your desired position */
+  width: 5px;
+  height: 50%; /* Adjust the height value as needed */
+  background-color: #ff7300;
+  opacity: 0.5;
+  z-index: 998;
+  transition: height 0.3s ease; /* Add a transition effect */
 }
-
-.progress-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background-color: #00e30b;
-}
-
-.show-progress {
-  height: 100%;
-}
-
 
 /* Avatar and Profile Details */
 
@@ -876,8 +850,6 @@ color: #CD0D0D;
 font-weight: 600;
 text-transform: uppercase;
 }
-
-
 .cta-holder{
 background-color: #ffffff;
 border: 1px #CD0D0D solid;

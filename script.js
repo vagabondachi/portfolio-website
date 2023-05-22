@@ -64,7 +64,7 @@ window.addEventListener('scroll', function() {
   const windowHeight = window.innerHeight;
   const documentHeight = document.documentElement.scrollHeight;
   const scrollTop = window.scrollY || window.pageYOffset;
-  const scrollProgress = (scrollTop / (documentHeight - windowHeight)) * 100;
+  const scrollProgress = 100 - ((scrollTop / (documentHeight - windowHeight)) * 100);
 
   progressBar.style.height = scrollProgress + '%';
 
@@ -72,5 +72,22 @@ window.addEventListener('scroll', function() {
     scrollToTopLink.style.display = 'block'; // Show the scroll-to-top link
   } else {
     scrollToTopLink.style.display = 'none'; // Hide the scroll-to-top link
+  }
+});
+
+// Resume
+
+const resumeBox = document.querySelector('.resume-box');
+const downloadText = document.getElementById('download-text');
+
+// Add event listener to the resume box
+resumeBox.addEventListener('click', function() {
+  // Check the current text content
+  if (downloadText.textContent === 'Download Resources') {
+    // Update the text to "Download Complete"
+    downloadText.textContent = 'Download Complete';
+  } else {
+    // Update the text to "Download Resources"
+    downloadText.textContent = 'Downloading Resources';
   }
 });
