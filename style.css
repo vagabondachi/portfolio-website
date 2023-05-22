@@ -114,7 +114,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0% 0% 0% 8%;
+  padding: 0% 0% 0% 6%;
 }
 
 .experience-wrapper h2,
@@ -129,7 +129,8 @@ body{
 }
 
 .experience-wrapper h2 {
-  font-size: var(--lengthLg1);
+  font-size: var(--lengthLg2);
+font-family: var(--fontPrimary);
 }
 
 .experience-wrapper h5 {
@@ -151,7 +152,7 @@ body{
 
 .details-profile h3 {
   font-size: var(--lengthSm3);
-  padding: 1% 0% 1% 0%;
+  padding: 0% 0% 1.5% 0%;
 }
 
 .details-profile h4 {
@@ -170,15 +171,31 @@ body{
   display: none;
 }
 
-.resume-box {
+.parent-container {
   position: relative;
-  width: 65%;
-  height: 100%; 
-  background-color: none; 
-  border: 1px solid #d23939;
-  text-align: center;
-  border-radius: 8px;
+  padding: 0;
+  width: 70%;
+  height: 30%;
+  border: 1px solid #908E9B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.resume-box {
+  width: 97%;
+  height: 75%;
+  background-color: #007bff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-info .resume-box {
+  opacity: 1;
+}
+
 
 .hide-on-scroll {
   display: block;
