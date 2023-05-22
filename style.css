@@ -82,6 +82,7 @@ body{
   align-items: center;
   justify-content: space-between;
   padding: 1% 1% 1% 1%;
+  position: relative; /* Add this line to establish a positioning context */
 }
 
 .avatar-wrapper {
@@ -130,7 +131,7 @@ body{
 
 .experience-wrapper h2 {
   font-size: var(--lengthLg2);
-font-family: var(--fontPrimary);
+  font-family: var(--fontPrimary);
 }
 
 .experience-wrapper h5 {
@@ -204,6 +205,54 @@ font-family: var(--fontPrimary);
 .hide-on-scroll.hidden {
   display: none;
 }
+
+
+
+.pause-button {
+  width: 5%;
+  top:12%;
+  height: 65%;
+  margin-left: auto; 
+  background-color: #CD0D0D;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 5px #4C0606;
+  position: absolute;
+  right: 5%; 
+}
+  .pause-button:hover {
+  transform: translateY(2px);
+  box-shadow: none; 
+  }
+  .pause-button::before,
+  .pause-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  }
+  .pause-button::before {
+  width: 10%;
+  height: 40%; 
+  margin-left: 10%;
+  }
+  .pause-button::after {
+  width: 10%;
+  height: 40%;
+  left: 50%; 
+  margin-left: -10%;
+  }
+
+
+
 /* || Header and Main Navigation */
 
 
@@ -311,46 +360,6 @@ font-family: var(--fontPrimary);
 /* Avatar and Profile Details */
 
 
-
-  .pause-button {
-  width: 4%;
-  height: 40px;
-  margin-right: 30px;
-  background-color: #CD0D0D;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow: 0 3px 5px #4C0606;
-  }
-  .pause-button:hover {
-  transform: translateY(2px);
-  box-shadow: none; 
-  }
-  .pause-button::before,
-  .pause-button::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  border-radius: 3px;
-  transition: all 0.2s ease;
-  }
-  .pause-button::before {
-  width: 10%;
-  height: 16px; 
-  margin-left: 10%;
-  }
-  .pause-button::after {
-  width: 10%;
-  height: 16px;
-  left: 50%; 
-  margin-left: -10%;
-  }
 
 /* Sidebar Left */
 
