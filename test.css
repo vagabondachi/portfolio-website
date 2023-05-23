@@ -1,0 +1,33 @@
+/* Sidebar Right */
+
+.scroll-marker{
+position: relative;
+flex-direction: column;
+align-items: center;
+display: flex;
+cursor: pointer;
+width: 50px;
+height: 50px;
+border-radius: 50px;
+background-color: #f2f2f23f;
+opacity:  0.5;
+border: none;
+outline: none;
+transition: all 0.2s ease;
+box-shadow: 0 3px 5px #413f3f;
+}
+.help-btn{
+font-weight: 600;
+color: rgba(50, 50, 50, 0.448);
+}
+.scroll-marker:hover {
+  transform: translateY(2px);
+  box-shadow: none; 
+  background-color: #83838347;
+  }
+.help-btn-preamble:hover {
+color: rgba(50, 50, 50, 0.448);
+}
+.help-btn-preamble {
+color: rgba(50, 50, 50, 0.153);
+}
