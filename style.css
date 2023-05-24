@@ -44,7 +44,18 @@ body {
   max-width: 100vw;
   margin: 0%;
   padding: 0%;
+    overflow-x: hidden;
 }
+ ul {
+margin: 0;
+padding: 0;
+}
+ol, ul{
+box-sizing: border-box;
+}
+
+
+
 
 #headline h1 {
   font-size: var(--lengthLg3);
@@ -355,19 +366,32 @@ body {
 /* Sidebar Left */
 
 .sidebar-elements {
+  position: fixed;
+  top:50%;
+  display: flex;
   align-items: center;
   list-style: none;
-  position: fixed;
   z-index: 50;
   min-height: 56px;
 }
 
 .sidebar-elements.left {
   top: 15%;
+  word-wrap: break-word;
   margin: 0;
   padding: 0;
   left: 4vh;
   float: left;
+}
+
+.sidebar-elements.right {
+  top: 12%;
+  right: 4.4vh;
+  transform-origin: right top;
+  transform: rotate(-90deg) translate(50%,-100%);
+}
+.right{
+  float: right;
 }
 
 .social-media {
@@ -382,17 +406,11 @@ body {
 
 /* Contents */
 
-section {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  padding: 0 10% 10%; /* Added this line */
-}
-
 .main {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10%;
+    position: relative;
 }
 
 .cl-1 {
@@ -453,13 +471,11 @@ section {
 
 #section-wrapper {
   position: relative;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 100vw;
 }
 
-#intro {
+#entr-content {
   margin-top: 10%;
   display: flex;
   flex-direction: column;
@@ -530,13 +546,7 @@ a.cta-see-projects {
   color: #CD0D0D;
 }
 
-.sidebar-elements.right {
-  top: 12%;
-  right: 2vh;
-  float: right;
-  padding: 0;
-  margin-right: 1%;
-}
+
 
 .clb-social-holder,
 .clb-scrollmark-holder {
@@ -683,6 +693,7 @@ a.cta-see-projects {
 #blogs{
 display: flex;
 flex-direction: column;
+width: 100%;
 }
 .blog-item {
   padding: 10%;
@@ -691,6 +702,7 @@ flex-direction: column;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 62%;
+ box-sizing: border-box;
 }
 
 #baguio {
