@@ -1,5 +1,5 @@
 # portfolio-website
-Portfolio Game/Design Website
+This is my personal Portfolio Game/Design Website.
 - Projects
 - Process
 - About Page
