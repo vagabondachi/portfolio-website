@@ -185,7 +185,6 @@ list-style: none;
 .hide-on-scroll.hidden {
   display: none;
 }
-
 .resume-container {
   position: relative;
   padding: 0;
@@ -205,8 +204,8 @@ list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px var(--colorPrimary), 0 0 70px var(--colorPrimary), 0 0 80px var(--colorPrimary), 0 0 100px var(--colorPrimary), 0 0 150px var(--colorPrimary);
 }
-
 .show-info .resume-box {
   opacity: 1;
 }
