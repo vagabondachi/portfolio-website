@@ -197,6 +197,8 @@ list-style: none;
 }
 
 .resume-box {
+
+  position: relative;
   width: 97%;
   height: 75%;
   background-color: var(--colorPrimary);
@@ -204,7 +206,28 @@ list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px var(--colorPrimary), 0 0 70px var(--colorPrimary), 0 0 80px var(--colorPrimary), 0 0 100px var(--colorPrimary), 0 0 150px var(--colorPrimary);
+  overflow: hidden;
+}
+
+.resume-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 60%, rgba(255, 255, 255, 0) 100%);
+  transform: rotate(45deg);
+  animation: glass-shine 3s linear infinite;
+}
+
+@keyframes glass-shine {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  100% {
+    transform: translate(50%, 50%) rotate(45deg);
+  }
 }
 .show-info .resume-box {
   opacity: 1;
