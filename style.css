@@ -580,9 +580,21 @@ font-size: .98em;
 #cta-book-now:hover {
   transform: translateY(2px);
   box-shadow: none;
+  box-shadow: inset gray 0px 0px 30px -12px; 
 }
 
-#cta-see-projects-holder {
+#cta-watch {
+  height: inherit;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 5px #3f3f3f;
+  padding: 0% 5% 0% 5%;
+  cursor: pointer;
   margin-left: 5%;
   display: flex;
   flex-direction: row;
@@ -590,16 +602,22 @@ font-size: .98em;
   width: max-content;
 }
 
+#cta-watch:hover {
+  transform: translateY(2px);
+  box-shadow: none;
+  box-shadow: inset gray 0px 0px 20px -12px; 
+}
+
 a.cta-see-projects {
   font-weight: 500;
   cursor: pointer;
-  color: #CD0D0D;
+  color: #3b3b3b;
   text-decoration: none;
 }
 
 #dl-icon {
   margin-left: 10px;
-  color: #CD0D0D;
+  color: #484848;
 }
 
 
