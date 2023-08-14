@@ -1,7 +1,7 @@
-# portfolio-website
-This is my personal Portfolio Game/Design Website.
+# portfolio-website 
+This is my personal Portfolio for Game/Design Website.
 - Projects
 - Process
-- About Page
+- About Me Page
 - Blogs
 - Contact Page
